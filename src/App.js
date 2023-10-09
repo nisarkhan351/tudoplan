@@ -45,10 +45,13 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
                 <button className='btn btn-warning' onClick={this.handleAdd}>Add</button>
               </div>
               <div className='container-fluid'>
-                 <ul className='list-unstyled mx-2 my-4'>
+                 {/* <ul className='list-unstyled mx-2 my-4'>
                   {this.state.items.map((value,i) =>{
                     return <Plan key={i} id={i} value={value} sendData={this.deletehandler} />
                   })}
+                 </ul> */}
+                 <ul className='list-unstyled row m-5'>
+                    <Plan p={this.state.items} sendData={this.deletehandler} />
                  </ul>
               </div>
             </div>
